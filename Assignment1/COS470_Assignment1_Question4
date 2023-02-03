@@ -1,0 +1,10 @@
+The difference between BPE and WordPiece is how they function. BPE uses a vocabulary that includes all possible base characters and uses bytes. WordPiece
+uses a bigram technique where it takes the inputted sentence and first splits it up into single character tokens. I will start with the example of using:
+
+low low low low low lowest lowest newer newer newer newer newer newer wider wider wider new new
+
+The base vocabulary using WordPiece for this would be ("l", "o", "w", "e", "s", "t", "n", "r", "i", "d")
+
+The next step would be to find the frequency of each bigram, meaning that "lo" would be checked, then "ow", then "we", and so on and so forth.
+
+Then the two most frequent bigrams will be merged to create a single token. WordPiece will use this technique to create a tokenized list for the inputted words.
